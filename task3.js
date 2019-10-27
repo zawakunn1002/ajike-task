@@ -1,25 +1,28 @@
 
+
+
 let isbn13 =
 [
   "9784274050190",
   "978404893065956",
   "9784ab7347784",
-  "9784798121964",
-  "1234567891234",
-  "9784167913083"
+  "9784798121964"
 ];
 
+let booltrue = Boolean(" ");
+let boolfalse = Boolean("");
 
-for(i=0; i <= 5; i++){
+
+for(i=0; i <= 3; i++){
 
   let start = isbn13[i].slice(0,3);
   let last = isbn13[i].slice(-1);
 
 
   if(isbn13[i].length !== 13) {
-    console.log('false');
+    document.write(isbn13[i]+boolfalse+ "<br>\n");
   }else if(start !== '978' && start !== '979'){
-    console.log('false');
+    document.write(isbn13[i]+boolfalse+ "<br>\n");
   }else{
     function judge(code){
         let even = 0;
@@ -48,9 +51,9 @@ for(i=0; i <= 5; i++){
 
 
       if(stringTotal !== last){
-        console.log('false');
+        document.write(isbn13[i]+boolfalse+ "<br>\n");
       }else{
-        console.log('true');
+        document.write(isbn13[i]+booltrue+ "<br>\n");
       };
         return stringTotal;
 
@@ -60,39 +63,3 @@ for(i=0; i <= 5; i++){
   }
 
 };
-
-
-
-
-
-// function judge(code){
-//     let even = 0;
-//     let odd = 0;
-//     let total = 0;
-//   for(let i = 0 ; i <= 11 ; i++){
-//     let int = code.slice(i,i+1);
-//     int = parseInt(int)
-//     if(i === 0 || (i % 2) === 0){
-//       odd = int * 1
-//       total += odd
-//     }else{
-//       even = int * 3
-//       total += even
-//     }
-//   }
-//   total = total % 10
-//   if(total === 0){
-//     total = 0;
-//   }else{
-//   total = 10 - total
-//   };
-//   console.log(total);
-//   return total
-
-// }
-
-// judge("9784167913083");
-
-
-
-
