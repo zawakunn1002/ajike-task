@@ -20,9 +20,9 @@ for(i=0; i <= 3; i++){
 
 
   if(isbn13[i].length !== 13) {
-    document.write(isbn13[i]+boolfalse+ "<br>\n");
+    document.write(isbn13[i]+"は"+boolfalse+ "です。"+"<br>\n");
   }else if(start !== '978' && start !== '979'){
-    document.write(isbn13[i]+boolfalse+ "<br>\n");
+    document.write(isbn13[i]+"は"+boolfalse+ "です。"+"<br>\n");
   }else{
     function judge(code){
         let even = 0;
@@ -32,18 +32,18 @@ for(i=0; i <= 3; i++){
         let int = code.slice(i,i+1);
         int = parseInt(int);
         if(i === 0 || (i % 2) === 0){
-          odd = int * 1
-          total += odd
+          odd = int * 1;
+          total += odd;
         }else{
-          even = int * 3
-          total += even
+          even = int * 3;
+          total += even;
         }
       }
-      total = total % 10
+      total = total % 10;
       if(total % 10 == 0){
         total == 0;
       }else{
-        total = 10 - total
+        total = 10 - total;
       };
 
 
@@ -51,9 +51,9 @@ for(i=0; i <= 3; i++){
 
 
       if(stringTotal !== last){
-        document.write(isbn13[i]+boolfalse+ "<br>\n");
+        document.write(isbn13[i]+"は"+boolfalse+"です。"+ "<br>\n");
       }else{
-        document.write(isbn13[i]+booltrue+ "<br>\n");
+        document.write(isbn13[i]+"は"+booltrue+"です。"+ "<br>\n");
       };
         return stringTotal;
 
